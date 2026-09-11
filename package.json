@@ -1,0 +1,14 @@
+{
+  "name": "eui-web-experience",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "python -m http.server 4173",
+    "build": "node scripts/build.mjs",
+    "lint": "node scripts/lint.mjs",
+    "test": "node scripts/test.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
