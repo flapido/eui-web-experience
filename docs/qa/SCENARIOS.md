@@ -12,7 +12,7 @@ MOTION-02 · Toggle Space and scroll → Space controls Play/Pause without hijac
 
 MOTION-03 · Enable reduced motion → decorative RAF/CSS loops stop while the static visualizer, controls and content remain usable · SOURCE_IMPLEMENTED · 2026-09-11
 
-DESIGN-01 · Review Light Architecture redesign in rendered browser → typography, portal signature and editorial compositions feel intentional at all target sizes · BLOCKED · 2026-09-11
+DESIGN-01 · Review Light Architecture redesign in rendered browser → typography, portal signature and editorial compositions feel intentional at all target sizes · PARTIALLY_VERIFIED (CDP confirmed: correct font-family Arial Narrow, warm white body bg, 700px horses, 595px listening-room, 329px canvas; screenshots at 1440x900, 1024x768, 390x844 from public URL) · 2026-09-11
 
 ENTRY-01 · Activate Enter experience → removes entry layer and exposes hero · PASS · 2026-09-11
 MUSIC-01 · Select a verified release → selected metadata and visual accent change · PASS · 2026-09-11

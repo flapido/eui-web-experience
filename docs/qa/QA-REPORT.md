@@ -152,3 +152,25 @@ Open `http://localhost:4173` in a normal desktop browser, press **Enter experien
 
 ### Manual Owner visual review required
 Human visual review of captured screenshots at all viewports remains the final gate before claiming full visual PASS.
+
+## Public deployment verification — 2026-09-11
+
+- **Hotfix**: root-relative asset paths (`/src/...`, `/assets/...`) corrected to relative paths (`./src/...`, `./assets/...`) for GitHub Pages project site compatibility.
+- **GitHub Pages**: enabled on `master` branch at `/eui-web-experience/`.
+- **Public URL**: https://flapido.github.io/eui-web-experience/
+- **CDP verification (Chrome 153.0.8010.36)**:
+  - `document.readyState` = "complete"
+  - `h1` = "HIPNOSIS" — primary identity confirmed
+  - `body.backgroundColor` = "rgb(246, 243, 233)" — warm white `--paper` palette applied (CSS loads correctly)
+  - `body.fontFamily` = "Arial Narrow, Helvetica Neue..." — correct typography applied
+  - `horses.png` loaded (naturalWidth=700px) — not broken
+  - `listening-room.png` loaded (naturalWidth=595px) — not broken
+  - `canvas` present (width=329px) — canvas renderer active
+  - favicon: `https://flapido.github.io/eui-web-experience/assets/incoming/icon.png` — correct href
+  - Bandcamp link: present and correct
+  - Motion: CSS custom properties confirmed updating in real-time (ambientDrift -20.79px→2.97px; vinylRotation 235.71°→254.47°)
+  - Console: no errors, no warnings, no runtime exceptions
+- **HTTP from public URL**: `/` 200, `/src/styles.css` 200, `/src/app.js` 200, `/assets/incoming/horses.png` 200, `/assets/incoming/icon.png` 200, `/assets/incoming/listening-room.png` 200
+- **Screenshots**: `docs/qa/screenshots/public-fixed-desktop-1440x900.png` (479KB), `public-fixed-mobile-390x844.png` (205KB) — both show fully rendered content
+- **Commits**: `1fb3f53 feat: publish Hipnosis audiovisual experience`, `3277614 Add public URL verification screenshots`, `8636160 fix: correct GitHub Pages asset paths`, `ff64191 Add public URL verification screenshots`
+- **LINT=PASS, TESTS=PASS (19), BUILD=PASS**
